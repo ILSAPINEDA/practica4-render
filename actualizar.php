@@ -1,6 +1,6 @@
 <?php
 
-include "Conexion.php";
+include "conexion.php";
 
 
 
