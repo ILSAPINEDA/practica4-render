@@ -1,19 +1,14 @@
 <?php
-// Obtiene los datos de conexión de las variables de entorno de Render
-$servername = getenv('DB_HOST');
-$dbname     = getenv('DB_NAME');
-$username   = getenv('DB_USER');
-$password   = getenv('DB_PASSWORD');
-$port       = getenv('DB_PORT'); // Necesitas el puerto en Render
-
-$conn = null;
+$host = getenv('DB_HOST');
+$db   = getenv('DB_NAME');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASSWORD');
+$port = getenv('DB_PORT');
 
 try {
-   // Usa PDO para conectar, incluyendo el puerto (port)
-   $conn = new PDO("pgsql:host=$servername;port=$port;dbname=$dbname", $username, $password);
-   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $e) {
-    echo "❌ Error de conexión en conexion.php: " . $e->getMessage();
+    $conn = new PDO("mysql:host=$host;port=$port;dbname=$db;charset=utf8", $user, $pass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "❌ Error de conexión: " . $e->getMessage();
 }
 ?>
