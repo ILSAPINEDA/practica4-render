@@ -1,7 +1,7 @@
 <?php
 
 //Se conecta haciendo una referencia al fichero que tenemos de Conexion
-include "Conexion.php";
+include "conexion.php";
 
 // Obtener datos del producto
 if (isset($_POST['cod'])) {
