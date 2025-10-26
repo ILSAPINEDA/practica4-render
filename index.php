@@ -1,13 +1,16 @@
 <?php
- include 'conexion.php';
+// 1. CORRECCIÓN DE RUTA: Uso de __DIR__ para asegurar que PHP encuentra el archivo en el mismo directorio.
+// 2. CORRECCIÓN DE CASO: Se usa 'conexion.php' (minúsculas) para coincidir con el nombre del archivo en GitHub.
+include __DIR__ . '/conexion.php';
 
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-    // Inicializa la variable $familia ANTES de usarla
-    $familia = isset($_POST['familia']) ? $_POST['familia'] : null;
+// Inicializa la variable $familia ANTES de usarla
+$familia = isset($_POST['familia']) ? $_POST['familia'] : null;
 
+// NOTA: Si usaste PDO/Postgres, la variable de conexión debe ser $conn, como está.
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +41,7 @@
 <div class="encabezado">
 
     <h1>Tarea: Listados de productos de una familia</h1>
-    <form id="form_seleccion" action="listado.php" method="post">
+    <form id="form_seleccion" action="index.php" method="post">
         <span>Familia: </span>
         <select name="familia">
             <?php
@@ -58,7 +61,9 @@
                     }
                 }
             } catch (PDOException $e) {
-                echo "<p>Error en la conexión o en la consulta: " . htmlspecialchars($e->getMessage()) . "</p>";
+                // Mostrar un mensaje de error claro en caso de falla de la conexión o consulta
+                echo "<option value=''>--- ERROR DB ---</option>";
+                echo "<p>Error: " . htmlspecialchars($e->getMessage()) . "</p>";
             }
             ?>
             </select>
