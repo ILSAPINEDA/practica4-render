@@ -1,7 +1,7 @@
 <?php
 // 1. CORRECCIÓN DE RUTA: Uso de __DIR__ para asegurar que PHP encuentra el archivo en el mismo directorio.
 // 2. CORRECCIÓN DE CASO: Se usa 'conexion.php' (minúsculas) para coincidir con el nombre del archivo en GitHub.
-include conexion.php';
+include 'conexion.php';
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
