@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['accion'])) {
     
     // Si el usuario presiona 'cancelar'
     if ($_POST['accion'] === 'cancelar') {
-        header("Location: listado.php"); 
+        header("Location: index.php"); 
         exit();
     }
     
