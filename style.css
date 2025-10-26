@@ -1,0 +1,136 @@
+.encabezado {
+    background-color:#ddf0a4;
+    border-radius: 5px;
+    border-color: #97b931;
+}
+
+
+
+.contenido {
+    background-color:#f0f0f0;
+}
+
+.formulario {
+    display: flex;
+    padding: 10px;
+    font-size: 16px; 
+    border: 1px solid rgb(0, 0, 0);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.mostrar {
+    background-color: #97b931; 
+    color: white;             
+    border: 1px solid #000000; 
+
+    border-radius: 5px;       
+    padding: 4px 8px;        
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mostrar:hover {
+    background-color: #698b00; 
+}
+
+.eliminar {
+    background-color: #dc3545; 
+    color: white;             
+    border: 1px solid #c82333; 
+
+    border-radius: 5px;       
+    padding: 8px 16px;        
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.eliminar:hover {
+    background-color: #c82333; 
+}
+
+.editar {
+    background-color: #2ac95f; 
+    color: white;             
+    border: 1px solid #1b9744; 
+
+    border-radius: 5px;       
+    padding: 8px 16px;        
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.editar:hover {
+    background-color: #1b9744; 
+}
+
+.warning {
+    color: red;
+}
+
+.cancelar {
+    background-color: #dc3545; 
+    color: white;             
+    border: 1px solid #c82333; 
+
+    border-radius: 5px;       
+    padding: 8px 16px;        
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cancelar:hover {
+    background-color: #c82333; 
+}
+
+.actualizar {
+    background-color: #2ac95f; 
+    color: white;             
+    border: 1px solid #1b9744; 
+
+    border-radius: 5px;       
+    padding: 8px 16px;        
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.actualizar:hover {
+    background-color: #1b9744; 
+}
+
+.mensaje {
+
+    background-color: #e6ffe6;
+    text-align: center;
+    padding: 20px 40px;
+    border: 1px solid #b2d8b2;
+    border-radius: 10px;
+}
