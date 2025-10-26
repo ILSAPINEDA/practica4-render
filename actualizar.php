@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['accion'])) {
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
-    <meta http-equiv="refresh" content="3;url=listado.php?">
+    <meta http-equiv="refresh" content="3;url=index.php?">
 
 </head>
 <body>
